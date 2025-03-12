@@ -9,7 +9,7 @@ uses(RefreshDatabase::class);
 // kan ingelogde user lijst met producten opvragen?
 // word de juiste blade view gerendered?
 // worden de producten doorgegeven aan de view?
-test('index', function () {
+test('producten kunnen worden bekeken', function () {
     $user = User::factory()->create(); // maak test user aan
     $this->actingAs($user); // simuleer user ingelogd
 
@@ -27,7 +27,7 @@ test('index', function () {
 // kan een ingelogde user een product aanmaken?
 // word de user na het aanmaken van een product geredirect naar de index pagina?
 // word het product opgeslagen in de database?
-test('store', function () {
+test('producten kunnen worden aangemaakt en opgeslagen', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
 
@@ -43,7 +43,7 @@ test('store', function () {
     ]);
 });
 
-test('edit', function () {
+test('een product kan worden opgehaald om te editen', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
 
@@ -59,7 +59,7 @@ test('edit', function () {
 // kan een ingelogde user een product updaten?
 // word de user na het updaten van een product geredirect naar de index pagina?
 // word het product correct geupdate in de database?
-test('update', function () {
+test('een product kan worden opgehaald en geupdate worden', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
 
@@ -80,7 +80,7 @@ test('update', function () {
 // kan een ingelogde user een product verwijderen?
 // word de user na het verwijderen van een product geredirect naar de index pagina?
 // word het product correct verwijderd uit de database?
-test('destroy', function () {
+test('een product kan worden opgehaald en worden verwijderd', function () {
     $user = User::factory()->create();
     $this->actingAs($user);
 
